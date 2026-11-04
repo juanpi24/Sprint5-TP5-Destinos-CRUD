@@ -63,16 +63,30 @@ export function DestinoForm({ valoresIniciales, onSubmit, textoBoton }) {
   return (
     <form onSubmit={handleSubmit(onSubmit)} noValidate className="space-y-4">
       <Campo id="titulo" etiqueta="Título" error={errors.titulo}>
-        <input id="titulo" type="text" className={claseInput} {...register('titulo')} />
+        <input
+          id="titulo"
+          type="text"
+          className={claseInput}
+          {...register('titulo')}
+        />
       </Campo>
 
       <div className="grid gap-4 sm:grid-cols-2">
         <Campo id="ubicacion" etiqueta="Ubicación" error={errors.ubicacion}>
-          <input id="ubicacion" type="text" className={claseInput} {...register('ubicacion')} />
+          <input
+            id="ubicacion"
+            type="text"
+            className={claseInput}
+            {...register('ubicacion')}
+          />
         </Campo>
 
         <Campo id="categoria" etiqueta="Categoría" error={errors.categoria}>
-          <select id="categoria" className={claseInput} {...register('categoria')}>
+          <select
+            id="categoria"
+            className={claseInput}
+            {...register('categoria')}
+          >
             <option value="">Elegí una categoría</option>
             {CATEGORIAS.map((categoria) => (
               <option key={categoria} value={categoria}>
@@ -84,7 +98,11 @@ export function DestinoForm({ valoresIniciales, onSubmit, textoBoton }) {
       </div>
 
       <div className="grid gap-4 sm:grid-cols-3">
-        <Campo id="rating" etiqueta="Calificación (0 a 5)" error={errors.rating}>
+        <Campo
+          id="rating"
+          etiqueta="Calificación (0 a 5)"
+          error={errors.rating}
+        >
           <input
             id="rating"
             type="number"
@@ -124,7 +142,11 @@ export function DestinoForm({ valoresIniciales, onSubmit, textoBoton }) {
       </Campo>
 
       <label className="flex items-center gap-2 text-sm text-on-surface">
-        <input type="checkbox" className="h-4 w-4 accent-primary" {...register('destacado')} />
+        <input
+          type="checkbox"
+          className="h-4 w-4 accent-primary"
+          {...register('destacado')}
+        />
         Destacado
       </label>
 

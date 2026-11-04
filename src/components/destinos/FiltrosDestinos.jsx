@@ -21,7 +21,14 @@ function Chip({ activo, onClick, children }) {
  * Componente "controlado": no guarda estado propio.
  * El estado (busqueda y categoria) vive en ListaPage y llega por props.
  */
-export function FiltrosDestinos({ busqueda, onBuscar, categoria, onCategoria, hayFiltros, onLimpiar }) {
+export function FiltrosDestinos({
+  busqueda,
+  onBuscar,
+  categoria,
+  onCategoria,
+  hayFiltros,
+  onLimpiar,
+}) {
   return (
     <div className="space-y-3">
       {/* Búsqueda por nombre */}
@@ -55,7 +62,11 @@ export function FiltrosDestinos({ busqueda, onBuscar, categoria, onCategoria, ha
           Todas
         </Chip>
         {CATEGORIAS.map((nombre) => (
-          <Chip key={nombre} activo={categoria === nombre} onClick={() => onCategoria(nombre)}>
+          <Chip
+            key={nombre}
+            activo={categoria === nombre}
+            onClick={() => onCategoria(nombre)}
+          >
             {nombre}
           </Chip>
         ))}

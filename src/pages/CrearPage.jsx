@@ -22,7 +22,9 @@ export function CrearPage() {
 
   return (
     <section className="mx-auto max-w-2xl space-y-6">
-      <h1 className="font-syne text-2xl font-bold text-on-surface">Nuevo destino</h1>
+      <h1 className="font-syne text-2xl font-bold text-on-surface">
+        Nuevo destino
+      </h1>
       <DestinoForm onSubmit={onSubmit} textoBoton="Crear destino" />
     </section>
   );

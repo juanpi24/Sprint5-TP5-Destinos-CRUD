@@ -10,7 +10,8 @@ import { NoEncontrado } from '../components/ui/NoEncontrado.jsx';
 export function EditarPage() {
   const { id } = useParams();
   const navigate = useNavigate();
-  const { destinos, loading, error, recargar, actualizar } = useDestinosContext();
+  const { destinos, loading, error, recargar, actualizar } =
+    useDestinosContext();
 
   if (loading) return <Cargando mensaje="Cargando destino..." />;
   if (error) return <MensajeError mensaje={error} onReintentar={recargar} />;
@@ -37,8 +38,14 @@ export function EditarPage() {
 
   return (
     <section className="mx-auto max-w-2xl space-y-6">
-      <h1 className="font-syne text-2xl font-bold text-on-surface">Editar destino</h1>
-      <DestinoForm valoresIniciales={destino} onSubmit={onSubmit} textoBoton="Guardar cambios" />
+      <h1 className="font-syne text-2xl font-bold text-on-surface">
+        Editar destino
+      </h1>
+      <DestinoForm
+        valoresIniciales={destino}
+        onSubmit={onSubmit}
+        textoBoton="Guardar cambios"
+      />
     </section>
   );
 }

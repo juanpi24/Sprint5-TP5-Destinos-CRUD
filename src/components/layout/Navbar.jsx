@@ -32,14 +32,17 @@ export function Navbar() {
           <NavLink to="/destinos/nuevo" className={claseLink}>
             + Nuevo destino
           </NavLink>
-     
+
           <button
             type="button"
             onClick={toggleTheme}
             aria-label={isDark ? 'Activar modo claro' : 'Activar modo oscuro'}
             className="flex items-center justify-center w-9 h-9 rounded-full bg-surface-container-high border border-outline-variant/40 hover:bg-surface-container-highest transition-colors cursor-pointer"
           >
-            <span className="material-symbols-outlined text-on-surface text-lg" aria-hidden="true">
+            <span
+              className="material-symbols-outlined text-on-surface text-lg"
+              aria-hidden="true"
+            >
               {isDark ? 'light_mode' : 'dark_mode'}
             </span>
           </button>

@@ -9,9 +9,15 @@ export const destinoSchema = z.object({
     .trim()
     .min(3, 'El título debe tener al menos 3 caracteres')
     //.regex(/^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s]+$/, 'El título solo puede contener letras y espacios')
-    .regex(/^[\p{L}\p{N}\s.,()/-]+$/u, 'El título contiene caracteres no permitidos')
+    .regex(
+      /^[\p{L}\p{N}\s.,()/-]+$/u,
+      'El título contiene caracteres no permitidos',
+    )
     .max(80, 'El título no puede superar los 80 caracteres'),
-  ubicacion: z.string().trim().min(2, 'Ingresá la ubicación (provincia o localidad)'),
+  ubicacion: z
+    .string()
+    .trim()
+    .min(2, 'Ingresá la ubicación (provincia o localidad)'),
   categoria: z.enum(CATEGORIAS, { error: 'Elegí una categoría' }),
   rating: z
     .number({ error: 'Ingresá una calificación' })

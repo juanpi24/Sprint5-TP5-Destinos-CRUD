@@ -70,7 +70,15 @@ export function DestinosProvider({ children }) {
 
   return (
     <DestinosContext.Provider
-      value={{ destinos, loading, error, recargar, crear, actualizar, eliminar }}
+      value={{
+        destinos,
+        loading,
+        error,
+        recargar,
+        crear,
+        actualizar,
+        eliminar,
+      }}
     >
       {children}
     </DestinosContext.Provider>
@@ -83,7 +91,9 @@ export function useDestinosContext() {
   const contexto = useContext(DestinosContext);
 
   if (!contexto) {
-    throw new Error('useDestinosContext() tiene que usarse adentro de <DestinosProvider>');
+    throw new Error(
+      'useDestinosContext() tiene que usarse adentro de <DestinosProvider>',
+    );
   }
 
   return contexto;

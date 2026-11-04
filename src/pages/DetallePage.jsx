@@ -46,11 +46,17 @@ export function DetallePage() {
       </Link>
 
       <article className="overflow-hidden rounded-default border border-outline-variant bg-surface-container">
-        <img src={destino.imagen} alt={destino.titulo} className="h-64 w-full object-cover sm:h-80" />
+        <img
+          src={destino.imagen}
+          alt={destino.titulo}
+          className="h-64 w-full object-cover sm:h-80"
+        />
 
         <div className="space-y-4 p-6">
           <div className="flex flex-wrap items-center gap-2">
-            <h1 className="font-syne text-2xl font-bold text-on-surface">{destino.titulo}</h1>
+            <h1 className="font-syne text-2xl font-bold text-on-surface">
+              {destino.titulo}
+            </h1>
             {destino.destacado && (
               <span className="rounded-full bg-tertiary-container px-3 py-1 text-xs font-bold text-on-surface">
                 ★ Destacado
@@ -66,23 +72,33 @@ export function DetallePage() {
           <dl className="grid gap-4 text-sm sm:grid-cols-2">
             <div>
               <dt className="text-on-surface-variant">Ubicación</dt>
-              <dd className="font-medium text-on-surface">{destino.ubicacion}</dd>
+              <dd className="font-medium text-on-surface">
+                {destino.ubicacion}
+              </dd>
             </div>
             <div>
               <dt className="text-on-surface-variant">Categoría</dt>
-              <dd className="font-medium text-on-surface">{destino.categoria}</dd>
+              <dd className="font-medium text-on-surface">
+                {destino.categoria}
+              </dd>
             </div>
             <div>
               <dt className="text-on-surface-variant">Calificación</dt>
-              <dd className="font-medium text-on-surface">{destino.rating} / 5</dd>
+              <dd className="font-medium text-on-surface">
+                {destino.rating} / 5
+              </dd>
             </div>
             <div>
               <dt className="text-on-surface-variant">Stock</dt>
-              <dd className="font-medium text-on-surface">{destino.stock} lugares</dd>
+              <dd className="font-medium text-on-surface">
+                {destino.stock} lugares
+              </dd>
             </div>
             <div>
               <dt className="text-on-surface-variant">Precio</dt>
-              <dd className="text-lg font-bold text-primary">{formatearPrecio(destino.precio)}</dd>
+              <dd className="text-lg font-bold text-primary">
+                {formatearPrecio(destino.precio)}
+              </dd>
             </div>
           </dl>
 

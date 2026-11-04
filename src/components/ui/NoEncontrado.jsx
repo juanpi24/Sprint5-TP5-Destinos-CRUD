@@ -4,8 +4,12 @@ import { Link } from 'react-router-dom';
 export function NoEncontrado({ titulo, mensaje }) {
   return (
     <section className="flex flex-col items-center justify-center border-2 border-dashed border-outline-variant/40 rounded-2xl p-8 bg-surface-container/40 text-center my-4">
-      <div className="text-4xl mb-3" aria-hidden="true">🧭</div>
-      <h1 className="font-syne text-xl font-bold text-on-surface mb-1">{titulo}</h1>
+      <div className="text-4xl mb-3" aria-hidden="true">
+        🧭
+      </div>
+      <h1 className="font-syne text-xl font-bold text-on-surface mb-1">
+        {titulo}
+      </h1>
       <p className="text-sm text-on-surface-variant max-w-xs">{mensaje}</p>
       <Link
         to="/destinos"

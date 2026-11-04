@@ -47,12 +47,13 @@ export function ListaPage() {
     <section className="space-y-6">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div>
-          <h1 className="font-syne text-2xl font-bold text-on-surface">Destinos</h1>
+          <h1 className="font-syne text-2xl font-bold text-on-surface">
+            Destinos
+          </h1>
           <p className="text-sm text-on-surface-variant mt-1">
             Administrá los destinos turísticos: ver, crear, editar y eliminar.
           </p>
         </div>
-      
       </div>
 
       {loading && <Cargando mensaje="Cargando destinos..." />}
@@ -83,13 +84,19 @@ export function ListaPage() {
           {destinosFiltrados.length > 0 ? (
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {destinosFiltrados.map((destino) => (
-                <DestinoCard key={destino.id} destino={destino} onEliminar={setAEliminar} />
+                <DestinoCard
+                  key={destino.id}
+                  destino={destino}
+                  onEliminar={setAEliminar}
+                />
               ))}
             </div>
           ) : (
             /* Hay destinos, pero ninguno coincide con los filtros */
             <section className="flex flex-col items-center justify-center border-2 border-dashed border-outline-variant/40 rounded-2xl p-8 bg-surface-container/40 text-center">
-              <div className="text-4xl mb-3" aria-hidden="true">🔎</div>
+              <div className="text-4xl mb-3" aria-hidden="true">
+                🔎
+              </div>
               <h2 className="text-lg font-bold text-on-surface mb-1">
                 No encontramos destinos con esa búsqueda
               </h2>
