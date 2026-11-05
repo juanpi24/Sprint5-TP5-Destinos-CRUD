@@ -8,7 +8,6 @@ export const destinoSchema = z.object({
     .string()
     .trim()
     .min(3, 'El título debe tener al menos 3 caracteres')
-    //.regex(/^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s]+$/, 'El título solo puede contener letras y espacios')
     .regex(
       /^[\p{L}\p{N}\s.,()/-]+$/u,
       'El título contiene caracteres no permitidos',

@@ -478,7 +478,7 @@ npm run lint
 
 ## Protección de acciones
 
-- Los modales se cierran con la tecla Escape o haciendo clic en el fondo.
+- Los modales se cierran con la tecla Escape.
 - El botón de guardar se deshabilita mientras se envía el formulario, para evitar envíos duplicados.
 - Eliminar nunca ocurre sin confirmación previa.
 
@@ -506,7 +506,7 @@ npm run lint
 - Instancia de axios con configuración centralizada.
 - Separación de la capa de API respecto de los componentes.
 - Context API para el estado del recurso.
-- React Router: rutas, parámetros (`useParams`), redirecciones, `NavLink`, `useSearchParams` y navegación programática.
+- React Router: rutas, parámetros (`useParams`), redirecciones, `NavLink` y navegación programática.
 - Formularios controlados con React Hook Form y validación con Zod.
 - `useEffect` con cancelación de peticiones (`AbortController`).
 - Estado derivado (lista filtrada) en lugar de estado duplicado.
